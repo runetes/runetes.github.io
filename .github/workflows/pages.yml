@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: startsWith(github.server_url, 'https://github.com')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
