@@ -323,6 +323,20 @@ h1 {
   list-style: none;
 }
 
+.disclaimer {
+  flex-basis: 100%;
+  max-width: 48rem;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.site-footer .disclaimer {
+  grid-column: 1 / -1;
+  max-width: 48rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
 /* Sections */
 
 section {
