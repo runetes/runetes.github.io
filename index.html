@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Runetes: lessons from running platforms at scale</title>
+  <meta name="description" content="Runetes is a collective of platform engineers. We ran a multi-tenant Kubernetes platform behind four of Europe's largest online marketplaces and publish the outages, trade-offs and fixes.">
+  <meta name="theme-color" content="#1f9f74">
+  <link rel="canonical" href="https://runetes.dev/">
+  <link rel="icon" href="assets/rune.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Runetes: lessons from running platforms at scale">
+  <meta property="og:description" content="Stories from the engineers who ran a multi-tenant Kubernetes platform for thousands of developers.">
+  <meta property="og:url" content="https://runetes.dev/">
+  <meta property="og:image" content="https://runetes.dev/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Runetes home">
+        <img src="assets/rune.svg" alt="" width="24" height="24">
+        Runetes
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#writing">Writing</a>
+        <a href="#themes">Themes</a>
+        <a href="#open-source">Open source</a>
+      </nav>
+      <a class="button small" href="https://github.com/runetes">GitHub</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>What we learned running a platform for thousands of engineers</h1>
+          <p class="lede">Runetes is a collective of platform engineers. We ran a multi-tenant Kubernetes platform behind four of Europe's largest online marketplaces, and we publish the outages, trade-offs and fixes.</p>
+          <div class="actions">
+            <a class="button primary" href="https://medium.com/learnings-from-the-paas/">Read the stories</a>
+            <a class="button" href="https://github.com/runetes">Browse our repositories</a>
+          </div>
+        </div>
+
+        <svg class="route" viewBox="40 20 940 600" role="img" aria-labelledby="route-title route-desc">
+          <title id="route-title">The Runetes rune as a route map</title>
+          <desc id="route-desc">The letter R, drawn as a route with six stops: platform as a product, multi-tenancy and isolation, Kubernetes at scale, reliability and incidents, efficiency and cost, infrastructure as code.</desc>
+          <g transform="translate(300 0)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path class="ghost" stroke-width="64" d="M167 72V565M215 80L440 182L198 295M205 300L440 565"/>
+            <path class="line spine" pathLength="1" stroke-width="8" d="M167 72V565"/>
+            <path class="line bowl" pathLength="1" stroke-width="8" d="M167 80L440 182L167 300"/>
+            <path class="line leg" pathLength="1" stroke-width="8" d="M167 300L440 565"/>
+          </g>
+          <g transform="translate(300 0)">
+            <circle class="stop" cx="167" cy="72" r="15"/>
+            <circle class="stop" cx="167" cy="300" r="15"/>
+            <circle class="stop" cx="167" cy="565" r="15"/>
+            <circle class="stop" cx="440" cy="182" r="15"/>
+            <circle class="stop" cx="322" cy="432" r="15"/>
+            <circle class="stop" cx="440" cy="565" r="15"/>
+          </g>
+          <g>
+            <text class="label" x="420" y="80" text-anchor="end">Platform as a product</text>
+            <text class="label" x="420" y="308" text-anchor="end">Multi-tenancy and isolation</text>
+            <text class="label" x="420" y="573" text-anchor="end">Kubernetes at scale</text>
+            <text class="label" x="792" y="182"><tspan x="792" dy="-4">Reliability</tspan><tspan x="792" dy="30">and incidents</tspan></text>
+            <text class="label" x="684" y="440">Efficiency and cost</text>
+            <text class="label" x="792" y="565"><tspan x="792" dy="-4">Infrastructure</tspan><tspan x="792" dy="30">as code</tspan></text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <div class="proof">
+      <div class="wrap">
+        <strong>One platform, four marketplaces</strong>
+        <ul>
+          <li>Leboncoin, France</li>
+          <li>Kleinanzeigen, Germany</li>
+          <li>Subito, Italy</li>
+          <li>Milanuncios, Spain</li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="writing">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Stories from the field</h2>
+          <p>The wins, the outages and the trade-offs, written by the people who were on call. No sanitized case studies.</p>
+        </div>
+        <ul class="writing-list">
+          <li>
+            <a href="https://medium.com/learnings-from-the-paas/running-multi-tenant-kubernetes-clusters-at-scale-our-production-toolbox-ed8dc5e5d62a">
+              <h3>Running multi-tenant Kubernetes clusters at scale: our production toolbox</h3>
+              <p>The operators, components and patterns we rely on in production. Start here.</p>
+              <span class="go">Read on Medium</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/learnings-from-the-paas/when-verticalpodautoscaler-goes-rogue-how-an-autoscaler-took-down-our-cluster-8c7479d5be3c">
+              <h3>When VerticalPodAutoscaler goes rogue: how an autoscaler took down our cluster</h3>
+              <p>A misconfiguration that hid for months, and what it cost us.</p>
+              <span class="go">Read on Medium</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/learnings-from-the-paas/how-we-avoided-an-outage-caused-by-running-out-of-ips-in-eks-c831ab97d0e4">
+              <h3>How we avoided an outage caused by running out of IPs in EKS</h3>
+              <p>Networking at scale is never just networking.</p>
+              <span class="go">Read on Medium</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/learnings-from-the-paas/how-we-migrated-30-kubernetes-clusters-to-terraform-cd2b1cef8b84">
+              <h3>How we migrated 30 Kubernetes clusters to Terraform</h3>
+              <p>Bringing a fleet under infrastructure as code.</p>
+              <span class="go">Read on Medium</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/learnings-from-the-paas/a-journey-through-kafkian-splitdns-in-a-multitenant-kubernetes-offering-d5fd274f676f">
+              <h3>A journey through Kafkian SplitDNS in a multi-tenant Kubernetes offering</h3>
+              <p>Serving one tenant's odd requirement without breaking everyone else.</p>
+              <span class="go">Read on Medium</span>
+            </a>
+          </li>
+        </ul>
+        <p class="writing-more"><a href="https://medium.com/learnings-from-the-paas/">Browse the full publication, Learnings from the PaaS</a></p>
+      </div>
+    </section>
+
+    <section id="themes" class="themes">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What we write about</h2>
+          <p>Six subjects that kept coming back while we ran one platform across many countries, brands and workloads.</p>
+        </div>
+        <dl class="theme-grid">
+          <div>
+            <dt>Platform as a product</dt>
+            <dd>Treat internal teams as customers: paved roads, golden paths, and knowing when not to build.</dd>
+          </div>
+          <div>
+            <dt>Multi-tenancy and isolation</dt>
+            <dd>Share infrastructure safely across teams, brands and countries without blast-radius surprises.</dd>
+          </div>
+          <div>
+            <dt>Operating Kubernetes at scale</dt>
+            <dd>Fleets of clusters across regions and accounts: upgrades, autoscaling and day-2 reality.</dd>
+          </div>
+          <div>
+            <dt>Reliability and incidents</dt>
+            <dd>Post-mortems written honestly, so the next team does not relearn them the hard way.</dd>
+          </div>
+          <div>
+            <dt>Efficiency and cost</dt>
+            <dd>Right-sizing, ARM, and doing the hard optimization once for everyone.</dd>
+          </div>
+          <div>
+            <dt>Infrastructure as code</dt>
+            <dd>Managing large fleets declaratively, and the migrations that get you there.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="open-source" class="oss">
+      <div class="wrap">
+        <div>
+          <h2>Open source</h2>
+          <h3>maiao</h3>
+          <p>A Git subcommand that turns each local commit into its own stacked pull request, so you review small changes on the forge you already use.</p>
+          <ul class="facts">
+            <li>Works with GitHub, GitLab, Gitea, Forgejo and Bitbucket Cloud.</li>
+            <li>Tracks each commit with a Gerrit-style Change-Id, so amended commits update their pull request.</li>
+            <li>Rebases the stack after a merge.</li>
+          </ul>
+          <a class="button primary" href="https://github.com/runetes/maiao">View maiao on GitHub</a>
+        </div>
+        <figure class="terminal">
+          <figcaption>one commit, one pull request</figcaption>
+<pre><span class="prompt">$ </span>git commit -m "feat: retry failed uploads"
+<span class="prompt">$ </span>git commit -m "test: cover the retry budget"
+<span class="prompt">$ </span>git review
+<span class="note"># two commits, two pull requests, stacked</span></pre>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <img src="assets/rune.svg" alt="" width="32" height="32">
+        <p>Runetes comes from <b>ᚱ</b> Raidho, the rune of the journey, and <i>-netes</i>, for the platforms we run. Stories from the field, for everyone building the road ahead.</p>
+      </div>
+      <ul>
+        <li><a href="https://medium.com/learnings-from-the-paas/">Medium: Learnings from the PaaS</a></li>
+        <li><a href="https://github.com/runetes">GitHub: runetes</a></li>
+        <li><a href="https://github.com/orgs/runetes/discussions">Discussions</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
